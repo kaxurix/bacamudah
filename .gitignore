@@ -1,0 +1,29 @@
+# Rahasia dan konfigurasi pribadi
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependensi dan berkas editor
+node_modules/
+vendor/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+
+# Data lokal, unduhan, dan cadangan pengembangan
+/.local/backups/
+/.local/browser/
+/.local/downloads/
+/.local/setup-draft/
+/.local/skill-sources/
+/.local/runtime/*
+
+# Simpan skrip verifikasi, tanpa hasil uji, sesi, atau akun sementara
+!/.local/runtime/user-evaluation/
+/.local/runtime/user-evaluation/*
+!/.local/runtime/user-evaluation/*.cjs
+!/.local/runtime/user-evaluation/*.php

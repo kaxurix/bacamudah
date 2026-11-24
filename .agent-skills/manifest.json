@@ -1,0 +1,839 @@
+[
+  {
+    "name": "ask-matt",
+    "description": "Ask which skill or flow fits your situation. A router over the skills in this repo.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/ask-matt",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/ask-matt",
+    "experimental": false,
+    "files": {
+      "PHASE-BOUNDARIES.md": "a8aa20158609ef39e2b308b6ba0660c91066838d07a867202e63a7744a88a3ed",
+      "SKILL.md": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c",
+      "agents/openai.yaml": "bdffbc5a0a99ed1b6ef3253d251d755fd18162b9845972e380007f844b09b05c"
+    }
+  },
+  {
+    "name": "code-review",
+    "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \\\"review since X\\\".",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/code-review",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/code-review",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+      "agents/openai.yaml": "8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352"
+    }
+  },
+  {
+    "name": "codebase-design",
+    "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/codebase-design",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/codebase-design",
+    "experimental": false,
+    "files": {
+      "DEEPENING.md": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+      "DESIGN-IT-TWICE.md": "c222ab5a82e0405672eb9062d62496139a08828e45d07fc5f18e4952c10fac1a",
+      "SKILL.md": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+      "agents/openai.yaml": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f"
+    }
+  },
+  {
+    "name": "diagnosing-bugs",
+    "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/diagnosing-bugs",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/diagnosing-bugs",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+      "agents/openai.yaml": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+      "scripts/hitl-loop.template.sh": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503"
+    }
+  },
+  {
+    "name": "domain-modeling",
+    "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/domain-modeling",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/domain-modeling",
+    "experimental": false,
+    "files": {
+      "ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+      "GLOSSARY-FORMAT.md": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+      "SKILL.md": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "agents/openai.yaml": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b"
+    }
+  },
+  {
+    "name": "grill-with-docs",
+    "description": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/grill-with-docs",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/grill-with-docs",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "agents/openai.yaml": "94cd0ab161fb468a836349f5ed482ba58ce8e709a05c57ce533d739dbd35cca9"
+    }
+  },
+  {
+    "name": "implement",
+    "description": "Implement a piece of work based on a spec or set of tickets.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/implement",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/implement",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+      "agents/openai.yaml": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc"
+    }
+  },
+  {
+    "name": "implement-spec",
+    "description": "Implement the result of /to-spec and /to-tickets in code.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/implement-spec",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/implement-spec",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "1993a473cec40ac85d081c112cdffdc63ec3267c2e412055ad09e013a2f623d1",
+      "agents/openai.yaml": "fd41efb42c60c96320d6531be7e4bf15cbf5518cd652d57dff27ccffa46988e9"
+    }
+  },
+  {
+    "name": "improve-codebase-architecture",
+    "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/improve-codebase-architecture",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/improve-codebase-architecture",
+    "experimental": false,
+    "files": {
+      "HTML-REPORT.md": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
+      "SKILL.md": "35b03a3db61e0f5aa333ea59b54963e45a3d2ace6649b2ef4f9576603e2582a6",
+      "agents/openai.yaml": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1"
+    }
+  },
+  {
+    "name": "pr",
+    "description": "Use when writing a PR body.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/pr",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/pr",
+    "experimental": false,
+    "files": {
+      "CREDITS.md": "a7a087127665d7298a72280ef6e19c41ad8404523712a788c8dc3ab414bc2497",
+      "SKILL.md": "ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd",
+      "agents/openai.yaml": "2295b586624db4ef546f3fd4695492f039d941a46d8a1593a702ce3ca511b8ad"
+    }
+  },
+  {
+    "name": "prototype",
+    "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/prototype",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/prototype",
+    "experimental": false,
+    "files": {
+      "LOGIC.md": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+      "SKILL.md": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+      "UI.md": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+      "agents/openai.yaml": "5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc"
+    }
+  },
+  {
+    "name": "research",
+    "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/research",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/research",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "1f629e18ab899412683bc6a1c4efb4339999e27c2fdac328f26ee10a8c031d33",
+      "agents/openai.yaml": "9b4c470d63221c1f68f22df70b83e2f12401b317babe0d1b7b5f24a974474d0d"
+    }
+  },
+  {
+    "name": "retro",
+    "description": "Conduct a retrospective on a coding session.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/retro",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/retro",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+      "agents/openai.yaml": "cb6fb9d7e6b4be5975f41f6def1dd00a1255bad5d9b02696b124c924a8b8745c"
+    }
+  },
+  {
+    "name": "setup-matt-pocock-skills",
+    "description": "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/setup-matt-pocock-skills",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/setup-matt-pocock-skills",
+    "experimental": false,
+    "files": {
+      "domain.md": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9",
+      "issue-tracker-github.md": "6fdb3e9b00b7b0b115ecac3b1c00e3790f637f190abf598815368722c0a94692",
+      "issue-tracker-gitlab.md": "947602d33a80f98f939fb990995b8f95a3459b114b919c4221d08bd75d7cffe0",
+      "issue-tracker-local.md": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
+      "SKILL.md": "b01e05bfe8c323171275c6ceec78b12f1bd4c62dfd26c2cfe8be806d3883f1ed",
+      "triage-labels.md": "ae512af838c78b8750471c42cd2b20fa32319553e61d84c9a23d171b40ce14aa",
+      "agents/openai.yaml": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939"
+    }
+  },
+  {
+    "name": "tdd",
+    "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/tdd",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/tdd",
+    "experimental": false,
+    "files": {
+      "mocking.md": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+      "SKILL.md": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+      "tests.md": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+      "agents/openai.yaml": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b"
+    }
+  },
+  {
+    "name": "to-spec",
+    "description": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/to-spec",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/to-spec",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+      "agents/openai.yaml": "1c5b4d1e3d8e52287ef19cc2742fdbbfae1914ac75d33af3e4c8174f08cc55bb"
+    }
+  },
+  {
+    "name": "to-tickets",
+    "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/to-tickets",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/to-tickets",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+      "agents/openai.yaml": "21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090"
+    }
+  },
+  {
+    "name": "triage",
+    "description": "Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/triage",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/triage",
+    "experimental": false,
+    "files": {
+      "AGENT-BRIEF.md": "7f5f87fed3033df1b06e083c480f3e847b1fbb0647746b8a4c6a50f9f26ef44f",
+      "OUT-OF-SCOPE.md": "1fbf9b432130c6380aa65813b55553cfda150309b27c595e183f8e335b8a190d",
+      "SKILL.md": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+      "agents/openai.yaml": "2e683717720cf456d165d0bb1a68bb600d0b6a8ccb61841c172e50d26f95351c"
+    }
+  },
+  {
+    "name": "wayfinder",
+    "description": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/wayfinder",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/wayfinder",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "0c9fa96791aebf3b7d654cf35c6aadde97d81f57c17b07d13b27c14d9c46561f",
+      "agents/openai.yaml": "88bc81a11a6d52ac67aeaa76b8b619e387020d47c5133a4dd4927fd15c4ad073"
+    }
+  },
+  {
+    "name": "wizard",
+    "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/engineering/wizard",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/wizard",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1",
+      "template.sh": "6566f147299bc6f1d941e64591ed04385416d543e11f96f564c7228f5018d0ed",
+      "agents/openai.yaml": "98f44d682d58e262f160dc59a8befc365e0aa65820dd0261864af26aa8e59d83"
+    }
+  },
+  {
+    "name": "chief-of-staff",
+    "description": "Pursue a long-running goal in a single session by co-ordinating subagents.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/chief-of-staff",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/chief-of-staff",
+    "experimental": true,
+    "files": {
+      "SKILL.md": "f4c1d6533edece6b275155911cb627154a6b13e2bc19934f77330f3afdd07987",
+      "agents/openai.yaml": "c0f68ed9da6977adc97a791be3bb0830d301b2d27f9c635d92d6f325bffefb83"
+    }
+  },
+  {
+    "name": "claude-handoff",
+    "description": "Hand the current conversation off to a fresh background agent that picks up the work immediately.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/claude-handoff",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/claude-handoff",
+    "experimental": true,
+    "files": {
+      "SKILL.md": "79357a18425d66d4c24048bedf83dceb79d3bba356f38014950f764a7fab4026",
+      "agents/openai.yaml": "2308a672978864633286fb9f0792b08657e501426b3f7883fc418d5d2eac5eb0"
+    }
+  },
+  {
+    "name": "loop-me",
+    "description": "Grill me about specs for the workflows I want to build, within this workspace.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/loop-me",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/loop-me",
+    "experimental": true,
+    "files": {
+      "SKILL.md": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+      "agents/openai.yaml": "b66fa10079957051be6a812f45e55b67ac394b71d5ba88349962b4c9205802c3"
+    }
+  },
+  {
+    "name": "setup-ts-deep-modules",
+    "description": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-invoked.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/setup-ts-deep-modules",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/setup-ts-deep-modules",
+    "experimental": true,
+    "files": {
+      "dependency-cruiser.config.cjs": "3c4973bec69f73b2117654abf9e666a7c28665b213be20e6d39869e29842428e",
+      "SKILL.md": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+      "agents/openai.yaml": "159f680217d50747702620c05fd65734a152185b3219a8ca5ee4630878a354fa"
+    }
+  },
+  {
+    "name": "software-factory",
+    "description": "Shared language for designing a software factory: the tasks it runs and the services it plugs into.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/software-factory",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/software-factory",
+    "experimental": true,
+    "files": {
+      "EXAMPLE-TASKS.md": "31c73748cd47b040fb11737f47634bba63b32cc6680000a9b22b6bc898155e49",
+      "GIT-HOSTS.md": "f6b453cd0b1601c329dcfbffcb4added077683a4b777c819530ff0a940b1147f",
+      "OBSERVABILITY-PLATFORMS.md": "c3bd68e1bd105ccdda407a7aa909807131a20117bbf510d1ad0cfefffa25cb4c",
+      "RUNNERS.md": "85aacfb9acac67948c1659562d60b52c2a13936faddd24de26c9094b35ff70e7",
+      "SKILL.md": "567326e926d5bab0548aad11effaa6aef3d4dfa1ed385af22413628f49a48285",
+      "TICKET-TRACKERS.md": "4b68a198d6c1a6d47f9ad7eb1f02cc3e60778a2b1610f8b2ac23f72230d575b2"
+    }
+  },
+  {
+    "name": "writing-beats",
+    "description": "Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/writing-beats",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/writing-beats",
+    "experimental": true,
+    "files": {
+      "SKILL.md": "a96abafa2372eede8267d770138b322d6125da8adaa7ccf0a5e08e4ee13ee71e",
+      "agents/openai.yaml": "ddaef01da61d8e3c5f482c4403033c20cf5823f08a1dbf1d4c871670831d01e2"
+    }
+  },
+  {
+    "name": "writing-fragments",
+    "description": "Writing, explore: mine raw fragments, no structure yet.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/writing-fragments",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/writing-fragments",
+    "experimental": true,
+    "files": {
+      "SKILL.md": "298b0edd23df229183630de592ed8aa4289233560f2040691f6eb77caeaad4ea",
+      "agents/openai.yaml": "81167f25ee8ea1bb4b4958f12b6702ea972ad31b05e03ec91e39fa4bae0c2641"
+    }
+  },
+  {
+    "name": "writing-shape",
+    "description": "Writing, exploit: shape raw material into an article, paragraph by paragraph.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/in-progress/writing-shape",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/writing-shape",
+    "experimental": true,
+    "files": {
+      "SKILL.md": "f5e6c57bdd85178ace4a260c92f46da6b64ddee18215b461d875739c68976f72",
+      "agents/openai.yaml": "56de45430e23104ff178415f5ecf7821d51a9cfabd8814b1607ebf39da2ef5cd"
+    }
+  },
+  {
+    "name": "git-guardrails-claude-code",
+    "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/misc/git-guardrails-claude-code",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/git-guardrails-claude-code",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+      "agents/openai.yaml": "d53cd783fc0ac208dec9a4c267989284384785aab6422dccdaed42f9e40243ec",
+      "scripts/block-dangerous-git.sh": "234922b83c0a1737ee7300806c21ac0f389b07aaeb65c2d71ccedafbc5e1ea4b"
+    }
+  },
+  {
+    "name": "migrate-to-shoehorn",
+    "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/misc/migrate-to-shoehorn",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/migrate-to-shoehorn",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "de4da4c11d924fac79c924b2ee3d2db4a5cb98386eb490a599119463d036ae72",
+      "agents/openai.yaml": "395c2db852e66a199f1cd07f7ed92d66cb6f0787460c5475926f1a5e778b699d"
+    }
+  },
+  {
+    "name": "scaffold-exercises",
+    "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/misc/scaffold-exercises",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/scaffold-exercises",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "75f5c9d771606fb9762f16522efc954df11c324f87148d8ff069bce166257de9",
+      "agents/openai.yaml": "525b33913340bea7947ad2de17f2a7c5fb94be543345fe80ae753b9a44ba601d"
+    }
+  },
+  {
+    "name": "setup-pre-commit",
+    "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/misc/setup-pre-commit",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/setup-pre-commit",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98",
+      "agents/openai.yaml": "acf41db398c5c43afe504008bb7d615a97b6498b0f1f6c5b2395254c0bfb57d1"
+    }
+  },
+  {
+    "name": "grill-me",
+    "description": "A relentless interview to sharpen a plan or design.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/grill-me",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/grill-me",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "agents/openai.yaml": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b"
+    }
+  },
+  {
+    "name": "grilling",
+    "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/grilling",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/grilling",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+      "agents/openai.yaml": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b"
+    }
+  },
+  {
+    "name": "handoff",
+    "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/handoff",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/handoff",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+      "agents/openai.yaml": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28"
+    }
+  },
+  {
+    "name": "teach",
+    "description": "Teach the user a new skill or concept, within this workspace.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/teach",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/teach",
+    "experimental": false,
+    "files": {
+      "GLOSSARY-FORMAT.md": "9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210",
+      "LEARNING-RECORD-FORMAT.md": "701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052",
+      "MISSION-FORMAT.md": "8cacbb3c0644d3ae0ea4965564797099401a6930a23f7cf462918576587f2418",
+      "RESOURCES-FORMAT.md": "e9cacf34026e11a8d1c8f9de88abe5bcbf654f4ebdb25cae8c0de0d5f48f44ec",
+      "SKILL.md": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba",
+      "agents/openai.yaml": "5856f3ae8aec742f1499c640aecdd5f1d6af5fa210a7c6ec794de8263a6f733f"
+    }
+  },
+  {
+    "name": "to-questionnaire",
+    "description": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/to-questionnaire",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/to-questionnaire",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
+      "agents/openai.yaml": "9e8a06c38c8842eea8d4922cb9d1ead8e3ace647bab259b943c994a1b4742bc2"
+    }
+  },
+  {
+    "name": "wait-what",
+    "description": "Stop. That last message did not land: re-pitch it.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/wait-what",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/wait-what",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "d961bb37defd975c539427edb8f450cdbccdcdd552e213c1ece46676a7970905",
+      "agents/openai.yaml": "b41faadf741d51e4ea184148b2d1854d93f947aaf754c7844f70a00f04194999"
+    }
+  },
+  {
+    "name": "writing-for-agents",
+    "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+    "repo": "https://github.com/mattpocock/skills",
+    "revision": "abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "source": "skills/productivity/writing-for-agents",
+    "source_root": ".local/skill-sources/skills-abeeaf95660ba9e8b7c753eb38f441ca707a8823",
+    "destination": ".agent-skills/writing-for-agents",
+    "experimental": false,
+    "files": {
+      "SKILL-MECHANICS.md": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
+      "SKILL.md": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+      "agents/openai.yaml": "eacb24b2a618cfb81dacb0416f4fdd75ddf3a8060f8ddb99aae1b1e301907e4b"
+    }
+  },
+  {
+    "name": "brainstorming",
+    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning anything new, in software or out of it (a talk, a business, a renovation).",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/brainstorming",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/brainstorming",
+    "experimental": false,
+    "files": {
+      "builder-check-prompt.md": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e",
+      "SKILL.md": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207",
+      "visual-companion.md": "6ffcb038b53254bd31debaa15e12dcd4ff24bd63d690e0b644ac6396701cf2e2",
+      "scripts/frame-template.html": "6a8a4e58bd6a44b904e2e3c57de774481d909204597e1498de53f1b2fecc4c4e",
+      "scripts/helper.js": "43c6d69954a46ec34a2a262bcc62a9a7e83e839c739f199cb72646d397c686e3",
+      "scripts/server.cjs": "763abf96510e0b892a1141397b31aa82ef900cf87ed34dde94bc8782baf4a7ca",
+      "scripts/start-server.sh": "314dd68dc00e8dd94c7491aca8a5f004c7fddffc161e2b07482f29f48d13659a",
+      "scripts/stop-server.sh": "0b5ccbbd57f62d3ed88993f7940b5ee0e5c0fc9b21c550c623da4f6292e47daf"
+    }
+  },
+  {
+    "name": "diagnosing-superpowers",
+    "description": "Use when a superpowers session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results, a skill that didn't fire, \"it took too long\", \"why is it so expensive\", \"what is it doing\" — or wants to build a bug report for the superpowers maintainers, for the current session or a past one identified by id or path, on any harness.",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/diagnosing-superpowers",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/diagnosing-superpowers",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "3143de8695c5a2d63e8b1675f33837578076f464deb127c2ebdd0b46fceef886",
+      "prompts/analyst-common.md": "88801c36070be2a54a8a9a29632b01ab21db053e2e76ee49b5252a9b74ca4090",
+      "prompts/cost-and-time.md": "fe97a66d4db3b436816ef82694bda413b522b3a862dd41978da01e358fffecc4",
+      "prompts/plan-adherence.md": "1dcbab82033598a2e9c9ee42e950d4b1822d2c871c02cef9e102cdd5cbbda113",
+      "prompts/quality-evidence.md": "749d11cf678f379ed77a29274cad456634e0284aa523639a1a214a9f2b986eb1",
+      "prompts/repeated-work.md": "895027f2dfa4b1b8bcdb7ac9aec8d45a80bff212fad6ec6cad5ab38fa68322f5",
+      "prompts/request-conflicts.md": "e800e38d8b7752c212c76c5c3ed75cd78b749684263ea0c313586f26af6f4b5c",
+      "prompts/scrub-audit.md": "5cc48f05a7f81f5f7e05e0c7ceafc0fb8774bcaf75fe88dcb5c7e408026c70ad",
+      "prompts/scrub.md": "854cb3320cc5377b493cea2f72519d67983464882db68a0f408a7d0a0f040b8c",
+      "prompts/similar-session.md": "b190f713b463df2bb5ec3914647e204074d1bd50643a53159db6d13cace916c1",
+      "prompts/skill-timeline.md": "45d604d583b57a77b9033eced8eb875ef342af70fcd66cf7d15c6dc89964890f",
+      "prompts/stumbles.md": "1f2d1f048aff7b8b400006301f1ce8c232ecc7e9d5f705af27a849b2c03ea2e7",
+      "references/context-safety.md": "e6be2bd3495f454d4bedee9484d728d245d1fa656e11fc4ceec5693c16e4730a",
+      "references/github-issues.md": "d26ef9197b4a6ae5159ae6d11abd162bcc624d95fc7ccf508e07b68f916a1b19",
+      "references/redaction-policy.md": "96b16f47074838fe2d7e609577d6f8b0ad460f8378b281a3f96ee23cb5a08bde",
+      "references/session-discovery.md": "6d1dced083e5d978448a78df298cf515531b0eb39b2854a4a2afbffeb69a7435",
+      "templates/bundle-README.md": "2e6ddc6b106028d5ebd00a50ad93a77111d675c219ee1273cd0857869e8d51ec",
+      "templates/case.md": "597892462be83bc478536ec91f7c285f6dd25d119c560734a3a180fe8471301d",
+      "templates/issue.md": "afd21779e5de5bc5adfe2f5a50a04e44ab8d50d9ad0f829243de248d6f023eed",
+      "templates/report.md": "38295d0fd785e8608f330815c59ebd7047942002ec7085aecbed54681f56b0c1"
+    }
+  },
+  {
+    "name": "dispatching-parallel-agents",
+    "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/dispatching-parallel-agents",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/dispatching-parallel-agents",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c"
+    }
+  },
+  {
+    "name": "executing-plans",
+    "description": "Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/executing-plans",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/executing-plans",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "deaf176fa179827e80f2ea3101db3ea90fdf562ebef340eba761e4687940f5f5",
+      "scripts/task-done": "ac0b5ebafc7d471507b7e94d88da77a11f187ba277c8d48fefaf8ff3e4fee50e",
+      "scripts/task-start": "4ae7ce3b6777c3240af786197836a6b4bbf3b0ee831c25f147c149ea8db54a21"
+    }
+  },
+  {
+    "name": "finishing-a-development-branch",
+    "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/finishing-a-development-branch",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/finishing-a-development-branch",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65"
+    }
+  },
+  {
+    "name": "receiving-code-review",
+    "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/receiving-code-review",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/receiving-code-review",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438"
+    }
+  },
+  {
+    "name": "requesting-code-review",
+    "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/requesting-code-review",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/requesting-code-review",
+    "experimental": false,
+    "files": {
+      "code-reviewer.md": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb",
+      "SKILL.md": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc"
+    }
+  },
+  {
+    "name": "subagent-driven-development",
+    "description": "Use when executing implementation plans with independent tasks in the current session",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/subagent-driven-development",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/subagent-driven-development",
+    "experimental": false,
+    "files": {
+      "implementer-prompt.md": "81dd9d5a3fb0b09b96b5829f03b9796842f3199ef7591d1ba1c2db2a515f64d0",
+      "re-review-prompt.md": "ad54d0a10f1c2c8e656456e0a46e654af5dfe5ee6bcef63428cfd69b8dcd9311",
+      "SKILL.md": "1baf70e307bde682c462513c86116333f1f066168c6710f45145bf5f0b00828d",
+      "task-reviewer-prompt.md": "61a04c2fb29907887d8babee1594f5e35ae26d461e7e584f5b7c283215165e08",
+      "references/batching.md": "b54dc7e23dbfb90db89bcb2fb3af591aabf6a271a165fbc0da4c6f9439980eac",
+      "references/cannot-verify.md": "e698713a15e0eabf1a2ab26ffe1bb04bf70c9d6d2e2060d44a0f9a1bdd4408bf",
+      "references/final-review.md": "6c9e12093e46c4ad0a203bc07709c17e3470f855f1b78e55c5e7b722a012a32c",
+      "references/fix-loop.md": "1938ce707915efc44021e563ebc29666329e20ad861b6c50b89f305b8f4e8d8b",
+      "references/handling-reports.md": "8f759cdd4936220c38aab05b6d6c48c6df8ac8f146b0f37a6d2facbf87133c67",
+      "references/preflight.md": "3ea21c5fc1af1a190ac8a9d19ceb0849b47bf2ffe27b87dffcc21b6a0539776c",
+      "references/resuming.md": "ff6e38bde2276faa2a7e93513086caded0ea10edbf2ec7f349a7e3b0d7c668c4",
+      "scripts/review-package": "aed7c6e09fc660417d28898ed975e84651cb9f18f4675141cd475edfb7037f3d",
+      "scripts/sdd-repo": "6f8256a776968d394bae679572e41ce572fd45c72074b98f9a8eb8b4f160e06f",
+      "scripts/sdd-workspace": "de3af5252fa595fc2000ba05cf69e06187d5c8aae9d283cced4c167ad1813061",
+      "scripts/task-brief": "0f244a12e146393c552ba62069d3eedcc85cb3f76de67b01f4e11219e5ebbcd8"
+    }
+  },
+  {
+    "name": "systematic-debugging",
+    "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/systematic-debugging",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/systematic-debugging",
+    "experimental": false,
+    "files": {
+      "condition-based-waiting-example.ts": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+      "condition-based-waiting.md": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "defense-in-depth.md": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "find-polluter.sh": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+      "root-cause-tracing.md": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+      "SKILL.md": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+    }
+  },
+  {
+    "name": "test-driven-development",
+    "description": "Use when implementing any feature or bugfix, before writing implementation code",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/test-driven-development",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/test-driven-development",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "writing-good-tests.md": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1"
+    }
+  },
+  {
+    "name": "using-git-worktrees",
+    "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/using-git-worktrees",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/using-git-worktrees",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd"
+    }
+  },
+  {
+    "name": "using-superpowers",
+    "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/using-superpowers",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/using-superpowers",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
+      "references/antigravity-tools.md": "4880f6de3da4e32f9659ebe7a72b9e0ebfff04e028c2ed96173f86d0387a04c0",
+      "references/claude-code-tools.md": "21479a3fee27448cab8748a3b5687e53bb257883bda9c070426f9a1ab5cebf1b",
+      "references/codex-tools.md": "1a38ad9b188c393052f58d95657a1c35ea6aafc8b5a27f198f3922912f70bbe7",
+      "references/gemini-tools.md": "62b9157bcb0ee3c6784e3d0da0798ddfa5872f9e0c34bea48f3079dabea71965",
+      "references/hermes-tools.md": "e2185c976a3c87503910e05e2aea58cc89bc8e569bb624b93df9958ac47a9190",
+      "references/muse-tools.md": "5a1da5c575fe18456ca71cd47ebfd8a38c745f8d82a67fe64d5b83080000eeb3",
+      "references/pi-tools.md": "703dbc83d23ecab9c6f388460c38abc482e9dee2fe6772a8c7a255152ad3a4d5"
+    }
+  },
+  {
+    "name": "verification-before-completion",
+    "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/verification-before-completion",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/verification-before-completion",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+    }
+  },
+  {
+    "name": "writing-plans",
+    "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/writing-plans",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/writing-plans",
+    "experimental": false,
+    "files": {
+      "SKILL.md": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+    }
+  },
+  {
+    "name": "writing-skills",
+    "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+    "repo": "https://github.com/obra/superpowers",
+    "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "skills/writing-skills",
+    "source_root": ".local/skill-sources/superpowers-22f0b463e7a5e579904dd6211a520321035526f7",
+    "destination": ".agent-skills/writing-skills",
+    "experimental": false,
+    "files": {
+      "render-graphs.js": "c7f412cc629461c4d10287e668731874c0497707023e3e3f74a5355eb2cee196",
+      "SKILL.md": "8cb3ac68c6d8c4bb46886b998b09af7989643cab8bd0e46ee86dd62e64546bbe",
+      "references/anthropic-best-practices.md": "217629b356c09c9bd11017c9788e8fc654ca1b32c92d4a51cd490e16dd65e59a",
+      "references/bulletproofing.md": "9397023e6bc85b556a57f3097371363bf03e28e755c57f403f470bcda90e0a23",
+      "references/CLAUDE_MD_TESTING.md": "0b379a3415e185d3c434b3ad283d8aa132f3022c2a4f210f168865b5986bcef0",
+      "references/discovery.md": "c6bbc74af3be90f693f7cbc986af6fa94e8df75f65109b52e96032587f5b92af",
+      "references/flowcharts.md": "8b1f542391f274f0d33f3457ac099a3d317d6877eaa3b8d3b1ebef151b55fda7",
+      "references/graphviz-conventions.dot": "e2890a593c91370e384b42f2f67b1a6232c9e69dddea7891a0c1c46d7b20b694",
+      "references/persuasion-principles.md": "a51bc9bf75189ea73a27b3fb504a2fdfdb966fb1f7f1cdf03203230a216ccc03",
+      "references/testing-skills-with-subagents.md": "ed8a6862c085900135962390530d9dc7637ad6d650b4324ce3b051287a5c3f22"
+    }
+  }
+]

@@ -1,0 +1,60 @@
+const { chromium } = require('./browser/node_modules/playwright-core');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const base = 'http://127.0.0.1:8000/';
+(async () => {
+  const browser = await chromium.launch({ headless: true, executablePath: 'C:/Users/MSI/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe' });
+  const passed = [];
+  try {
+    const context = await browser.newContext();
+    const noToken = await context.request.post(base + 'register.php', { form: { nama: 'Tidak boleh dibuat', email: 'forged@example.test', password: 'Test12345', password2: 'Test12345' } });
+    assert.equal(noToken.status(), 400);
+    const arrayToken = await context.request.post(base + 'login.php', { form: { 'csrf[]': 'invalid', email: 'user@bacamudah.test', password: 'user12345' } });
+    assert.equal(arrayToken.status(), 400);
+    passed.push('Missing and array CSRF tokens are rejected with 400');
+    for (const file of ['.local/runtime/mysql-local.ini', '.agent-skills/manifest.json', 'config/database.php']) {
+      const response = await context.request.get(base + file);
+      assert.equal(response.status(), 404);
+    }
+    passed.push('Development files and database configuration cannot be downloaded');
+    const native = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+    const page = await native.newPage();
+    await page.goto(base + 'login.php');
+    await page.locator('#email').fill('user@bacamudah.test');
+    await page.locator('#password').fill('user12345');
+    await Promise.all([page.waitForURL('**/index.php'), page.locator('.auth-form [type="submit"]').click()]);
+    assert.ok(await page.locator('.kartu-bacaan').count() >= 3);
+    await page.goto(base + 'read.php?id=1');
+    assert.ok(await page.locator('#isi-bacaan').isVisible());
+    assert.ok(await page.locator('#form-atur').isVisible());
+    await page.locator('input[name="tema"][value="krem"]').check();
+    await Promise.all([page.waitForNavigation(), page.locator('#form-atur [type="submit"]').click()]);
+    assert.equal(await page.locator('body').getAttribute('data-tema'), 'krem');
+    await page.locator('input[name="tema"][value="normal"]').check();
+    await Promise.all([page.waitForNavigation(), page.locator('#form-atur [type="submit"]').click()]);
+    passed.push('Login, library, reader and saved settings still work without JavaScript');
+    const rich = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const richPage = await rich.newPage();
+    await richPage.goto(base + 'login.php');
+    await richPage.locator('#email').fill('user@bacamudah.test');
+    await richPage.locator('#password').fill('user12345');
+    await Promise.all([richPage.waitForURL('**/index.php'), richPage.locator('.auth-form [type="submit"]').click()]);
+    await richPage.goto(base + 'read.php?id=1');
+    await richPage.evaluate(() => { window.speechSynthesis.getVoices = () => []; window.speechSynthesis.speak = utterance => { utterance.onstart(); }; window.speechSynthesis.cancel = () => {}; });
+    await richPage.locator('#btn-baca').click();
+    assert.equal(await richPage.locator('#btn-baca').getAttribute('aria-pressed'), 'true');
+    await richPage.locator('#btn-baca').click();
+    assert.equal(await richPage.locator('#btn-baca').getAttribute('aria-pressed'), 'false');
+    passed.push('Speech start/stop UI works with a simulated browser voice provider; real device audio is not verified');
+    await richPage.locator('input[name="tema"][value="krem"]').check();
+    await richPage.addScriptTag({ path: require.resolve('./browser/node_modules/axe-core/axe.min.js') });
+    const violations = await richPage.evaluate(async () => (await axe.run({ runOnly: { type: 'tag', values: ['wcag2a','wcag2aa','wcag21aa'] } })).violations.map(v => ({ id: v.id, targets: v.nodes.map(n => n.target) })));
+    assert.deepEqual(violations, []);
+    passed.push('Cream reader theme passes the automatic WCAG A/AA audit');
+    await richPage.locator('#btn-reset').click();
+    await richPage.screenshot({ path: path.join(__dirname, 'runtime/redesign/13-reader-laptop.png'), fullPage: true });
+    console.log(JSON.stringify({ passed }, null, 2));
+    fs.writeFileSync(path.join(__dirname, 'runtime/redesign/followup-report.json'), JSON.stringify({ passed }, null, 2));
+  } finally { await browser.close(); }
+})().catch(error => { console.error(error); process.exitCode = 1; });
