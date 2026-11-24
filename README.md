@@ -331,6 +331,6 @@ tidak menggantikan pengujian ketukan sentuh.
 
 | Nama | NIM | Peran |
 |------|-----|-------|
-| (isi) | (isi) | (isi) |
-| (isi) | (isi) | (isi) |
-| (isi) | (isi) | (isi) |
+| Alika Salsabila | H1D025071 | Full-Stack Developer |
+| Angga Farzuqni | H1D025083 | Full-Stack Developer |
+| Kautsar Rifqi | H1D025084 | Full-Stack Developer |
